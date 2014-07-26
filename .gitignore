@@ -1,0 +1,10 @@
+target
+.DS_Store
+.classpath
+.settings
+.project
+.wtpmodules
+.externalToolBuilders
+*.bak
+*~lock.*
+*.md~
