@@ -12,12 +12,12 @@ Material aula Vraptor 4 - UTFPR
 <h3>Importando e rodando o projeto no eclipse</h3>
 <h4>Importando</h4>
 <p>O projeto foi construido utilizando Maven para importar no eclipse basta  
-você utilizar a opção de <strong>import->maven->Existing Maven Projects</strong> e escolher a pasta do projeto que você baixo. </p>
+voc√™ utilizar a op√ß√£o de <strong>import->maven->Existing Maven Projects</strong> e escolher a pasta do projeto que voc√™ baixo. </p>
 <h4>Construindo e rodando</h4>
-<p>Para construir o .war e verificar se todas as dependências deram certo você deverá executar o projeto com a opção <strong>run->run as->Maven install</strong></p>
+<p>Para construir o .war e verificar se todas as depend√™ncias deram certo voc√™ dever√° executar o projeto com a op√ß√£o <strong>run->run as->Maven install</strong></p>
 <p>Para rodar o projeto utilizaremos o Wildfly baixado anteriormente. 
-A integração do Wildfly com o eclipse acontece através de um plugin do JbossAS que deve ser baixado pelo <strong>Help->Eclipse Marketplace->JBossTools</strong> instalar somente o JBossAS o restante pode deixar desmarcado.</p>
-<p>Para configurar o servidor no eclipse basta utilizar a opção <strong>Servers->new Server->JBoss->wildfly</strong> segue alguns links para ajudar:</p>
+A integra√ß√£o do Wildfly com o eclipse acontece atrav√©s de um plugin do JbossAS que deve ser baixado pelo <strong>Help->Eclipse Marketplace->JBossTools</strong> instalar somente o JBossAS o restante pode deixar desmarcado.</p>
+<p>Para configurar o servidor no eclipse basta utilizar a op√ß√£o <strong>Servers->new Server->JBoss->wildfly</strong> segue alguns links para ajudar:</p>
 
 <ul>
 <li>http://www.mastertheboss.com/wildfly-8/configuring-eclipse-to-use-wildfly-8</li>
@@ -25,4 +25,4 @@ A integração do Wildfly com o eclipse acontece através de um plugin do JbossAS q
 <li>http://pablonobrega.wordpress.com/2014/05/28/configurando-o-wildfly-no-eclipse-kepler/</li>
 </ul>
 
-<p>Após configurado o server para rodar basta clicar sobre o projeto e escolher a opção <strong>run->run as->run on server</strong></p>
+<p>Ap√≥s configurado o server para rodar basta clicar sobre o projeto e escolher a op√ß√£o <strong>run->run as->run on server</strong></p>
