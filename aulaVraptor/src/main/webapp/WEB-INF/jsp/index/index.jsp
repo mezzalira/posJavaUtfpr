@@ -17,7 +17,66 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Olá Vraptor</h1>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Olá Vraptor</h1>
+        <p>Projeto da disciplina de Vraptor</p>
+        <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Produtos</h2>
+          <p>Cadastro de produtos</p>
+          <p><a class="btn btn-default" href="#" role="button">Cadastrar</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Clientes</h2>
+          <p>Cadastro de cliente</p>
+          <p><a class="btn btn-default" href="${linkTo[ClienteController].form}" role="button">Cadastrar</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Pedido</h2>
+          <p>Efetuar pedido</p>
+          <p><a class="btn btn-default" href="#" role="button">Vender</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="static/js/jquery-1.11.1.min.js"></script>

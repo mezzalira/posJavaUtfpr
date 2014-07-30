@@ -1,4 +1,9 @@
 Material aula Vraptor 4 - UTFPR
+
+<p>Projeto desenvolvido com Vraptor 4, Hibernate 4.5, CDI, EJB e Bootstrap 3.2</p>
+
+<p>Por questões didáticas utilizado controle de transações e banco de dados pelo servidor da aplicação, através do DataSource de exemplo do Wildfly.</p>
+
 ============
 
 <h3>Requisitos de ferramentas</h3>
