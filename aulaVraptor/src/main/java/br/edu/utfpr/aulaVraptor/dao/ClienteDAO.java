@@ -15,8 +15,16 @@ public class ClienteDAO {
 	@PersistenceContext
 	private EntityManager em;
 	
-	public void save(Cliente cliente) {
+	public void inserir(Cliente cliente) {
 		em.persist(cliente);
+	}
+	
+	public void alterar(Cliente cliente) {
+		em.merge(cliente);
+	}
+	
+	public void remover(Long codigo) {
+		em.remove(em.getReference(Cliente.class, codigo));
 	}
 
 	public List<Cliente> listAll() {
