@@ -5,8 +5,8 @@
 	<artifactId>aulaVraptor</artifactId>
 	<version>0.0.1</version>
 	<packaging>war</packaging>
-
 	<build>
+		<finalName>aulaVraptor</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -28,12 +28,11 @@
 			</plugin>
 		</plugins>
 	</build>
-
 	<dependencies>
 		<dependency>
 			<groupId>br.com.caelum</groupId>
 			<artifactId>vraptor</artifactId>
-			<version>4.1.0-RC1</version>
+			<version>4.0.0.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.inject</groupId>
@@ -44,7 +43,12 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.5</version> <!-- ou a última versão disponível -->
+			<version>1.7.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.18.1-GA</version>
 		</dependency>
 	</dependencies>
 </project>
