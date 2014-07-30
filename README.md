@@ -29,3 +29,7 @@ A integração do Wildfly com o eclipse acontece através de um plugin do JbossA
 </ul>
 
 <p>Após configurado o server para rodar basta clicar sobre o projeto e escolher a opção <strong>run->run as->run on server</strong></p>
+
+<h3>Acessando</h3>
+
+<p>Para acessar basta digitar a seguinte url no navegador http://localhost:8080/aulaVraptor/</p>
