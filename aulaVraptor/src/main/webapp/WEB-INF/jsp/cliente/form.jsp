@@ -9,7 +9,7 @@
 <title>Cadastro de Produto</title>
 </head>
 <body>
-	<form action="${linkTo[ClienteController].add}">
+	<form action="${linkTo[ClienteController].add}" method="post">
 		<input type="text"  name="cliente.nome" id="cliente-nome"/>
 		<input type="submit" value="Salvar"/>
 	</form>
