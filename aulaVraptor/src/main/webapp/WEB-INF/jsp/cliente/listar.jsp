@@ -7,6 +7,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Cadastro de Produto</title>
+<link href="static/css/bootstrap.min.css" rel="stylesheet">
+<link href="static/css/jquery-ui.min.css" rel="stylesheet">
 </head>
 <body>
 	<p>Pesquisar:</p>
@@ -14,7 +16,7 @@
 		<label for="codigo">Código</label>
 		<input name="codigo" id="codigo" value="${codigo}"/>
 		<label for="nome">Nome</label>
-		<input name="nome" id="nome" value="${nome}"/>
+		<input name="nome" id="nome" value="${nome}" autocomplete="off"/>
 		<button type="submit">Pesquisar</button>
 	</form>
 
@@ -39,5 +41,31 @@
 			</c:forEach>
 		</tbody>
 	</table>
+	
+	<script src="static/js/jquery-1.11.1.min.js"></script>
+	<script src="static/js/jquery-ui.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="static/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript">
+	    $( "#nome" ).autocomplete(
+	    		{
+	    			source: '<c:url value="/clientes/busca.json"/>',
+	    			minLength: 2,
+	    			dataType: "json",
+	    			select: function( event, ui ) {
+	    				$( "#nome" ).val( ui.item.nome );
+	    				$( "#codigo" ).val( ui.item.codigo );
+	    				return false;
+	    			}
+	    		}
+	    	).data("ui-autocomplete")._renderItem = function( ul, item ) {
+		    		return $( "<li></li>" )
+		    					.data( "item.autocomplete", item )
+		    					.append( "<a>" + item.codigo + " - " + item.nome + "</a>" )
+		    					.appendTo( ul );
+	    }
+  	</script>
+    
 </body>
 </html>

@@ -18,6 +18,8 @@ import br.com.caelum.vraptor.validator.Validator;
 import br.edu.utfpr.aulaVraptor.dao.ClienteDAO;
 import br.edu.utfpr.aulaVraptor.model.Cliente;
 
+import static br.com.caelum.vraptor.view.Results.*;
+
 @Controller
 @Path("/clientes")
 public class ClienteController {
@@ -76,5 +78,12 @@ public class ClienteController {
 		}
 		List<Cliente> clientes = dao.list(nome);
 		result.include("clienteList", clientes);
+	}
+	
+	@Get
+	@Path("/busca.json")
+	public void buscaJson(String term){
+		List<Cliente> clientes = dao.list(term);
+		result.use(json()).withoutRoot().from(clientes).serialize();
 	}
 }
