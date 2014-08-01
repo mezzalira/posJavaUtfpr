@@ -37,4 +37,4 @@ A integração do Wildfly com o eclipse acontece através de um plugin do JbossA
 
 <h3>Slideshare</h3>
 
-<a href="http://www.slideshare.net/slideshow/embed_code/37579461">Visualizar Slide</a>
+<a href="http://www.slideshare.net/slideshow/embed_code/37579461" target="_blanck">Visualizar Slide</a>
