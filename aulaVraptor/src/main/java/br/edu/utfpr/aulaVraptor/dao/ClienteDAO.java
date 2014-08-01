@@ -36,6 +36,12 @@ public class ClienteDAO {
 		query.setParameter("codigo", codigo);
 		return query.getSingleResult();
 	}
+
+	public List<Cliente> list(String nome) {
+		TypedQuery<Cliente> query = em.createQuery("select o from Cliente o where o.nome like :nome", Cliente.class);
+		query.setParameter("nome", "%"+nome+"%");
+		return query.getResultList();
+	}
 	
 	
 }

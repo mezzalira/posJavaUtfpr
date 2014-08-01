@@ -9,12 +9,21 @@
 <title>Cadastro de Produto</title>
 </head>
 <body>
+	<p>Pesquisar:</p>
+	<form action="<c:url value="/clientes/pesquisar"/>">
+		<label for="codigo">Código</label>
+		<input name="codigo" id="codigo" value="${codigo}"/>
+		<label for="nome">Nome</label>
+		<input name="nome" id="nome" value="${nome}"/>
+		<button type="submit">Pesquisar</button>
+	</form>
+
 	<table>
 		<thead>
 			<tr>
 				<th>Código</th>
 				<th>Nome</th>
-			<tr>
+			</tr>
 		</thead>
 		<tbody>
 			<c:forEach items="${clienteList}" var="cliente">

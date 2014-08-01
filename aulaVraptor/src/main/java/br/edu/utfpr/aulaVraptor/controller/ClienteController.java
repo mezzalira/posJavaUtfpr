@@ -3,6 +3,8 @@ package br.edu.utfpr.aulaVraptor.controller;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Delete;
@@ -11,6 +13,8 @@ import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Put;
 import br.com.caelum.vraptor.Result;
+import br.com.caelum.vraptor.interceptor.IncludeParameters;
+import br.com.caelum.vraptor.validator.Validator;
 import br.edu.utfpr.aulaVraptor.dao.ClienteDAO;
 import br.edu.utfpr.aulaVraptor.model.Cliente;
 
@@ -22,6 +26,8 @@ public class ClienteController {
 	private ClienteDAO dao;
 	@Inject
 	private Result result;
+	@Inject
+	private Validator validator;
 	
 	@Get
 	@Path("/novo")
@@ -29,8 +35,9 @@ public class ClienteController {
 	}
 
 	@Post
-	public void adicionar(Cliente cliente) {
-        dao.inserir(cliente);
+	public void adicionar(@NotNull @Valid Cliente cliente) {
+		validator.onErrorForwardTo(this).form();
+		dao.inserir(cliente);
         result.redirectTo(this).listar();
     }
 	
@@ -55,7 +62,19 @@ public class ClienteController {
     }
 
 	@Get
+	@Path("")
     public List<Cliente> listar() {
         return dao.listAll();
     }
+	
+	@Get
+	@Path("/pesquisar")
+	@IncludeParameters
+	public void listar(Long codigo, String nome){
+		if(codigo != null){
+			result.redirectTo(this).visualizar(new Cliente(codigo));
+		}
+		List<Cliente> clientes = dao.list(nome);
+		result.include("clienteList", clientes);
+	}
 }

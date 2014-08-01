@@ -9,7 +9,11 @@
 <title>Cadastro de Produto</title>
 </head>
 <body>
+	<c:forEach var="error" items="${errors}">
+	    ${error.category} - ${error.message}<br />
+	</c:forEach>
 	<form action="${linkTo[ClienteController].adicionar}" method="post">
+		<label for="cliente-nome">Nome</label>
 		<input type="text"  name="cliente.nome" id="cliente-nome"/>
 		<input type="submit" value="Salvar"/>
 	</form>
