@@ -22,47 +22,70 @@
 </script>
 </jsp:attribute>
 	<jsp:body>
-	<form action="<c:url value="/clientes/pesquisar"/>">
-		<label for="codigo">Código</label>
-		<input name="codigo" id="codigo" value="${codigo}" />
-		<label for="nome">Nome</label>
-		<input name="nome" id="nome" value="${nome}" autocomplete="off" />
-		<button type="submit" class="btn btn-default">Pesquisar</button>
-	</form>
-	
-	<div class="pull-right	">
-		<p>Exemplo auto complete</p>
-		<label for="nome">Nome</label>
-		<input name="nome-auto" id="nome-auto" autocomplete="off" />
+	<div class="well">
+		<form class="form-inline"
+				action="<c:url value="/clientes/pesquisar"/>">
+			<div class="form-group">
+				<label for="codigo">Código</label>
+				<input name="codigo" id="codigo" value="${codigo}" />
+			</div>
+  			<div class="form-group">
+				<label for="nome">Nome</label>
+				<input name="nome" id="nome" value="${nome}" autocomplete="off" />
+			</div>
+  			<div class="form-group">
+				<button type="submit" class="btn btn-primary">
+				<span class="glyphicon glyphicon-search"></span> Pesquisar</button>
+			</div>
+		</form>
 	</div>
-	<a href="${linkTo[ClienteController].form}">Novo</a>
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<th>Código</th>
-				<th>Nome</th>
-				<th>Opções</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach items="${clienteList}" var="cliente">
-				<tr>
-					<td>${cliente.codigo}</td>
-					<td>${cliente.nome}</td>
-					<td>
-						<form action="${linkTo[ClienteController].remover(cliente)}"
-								method="post">
-							<button type="submit" name="_method" value="DELETE" class="pull-left">
-								<span class="glyphicon glyphicon-trash"></span>
-							</button>
-						</form>
-						<a href="${linkTo[ClienteController].visualizar(cliente)}" class="pull-left">
-							<span class="glyphicon glyphicon-pencil"></span>
-						</a>
-					</td>
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
+
+	<div class="row hide">
+		<div class="col-xs-12">
+			<p>Exemplo auto complete</p>
+			<label for="nome">Nome</label>
+			<input name="nome-auto" id="nome-auto" autocomplete="off" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<a href="${linkTo[ClienteController].form}" class="btn btn-success">
+			<span class="glyphicon glyphicon-plus"></span> Novo</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Código</th>
+						<th>Nome</th>
+						<th>Opções</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach items="${clienteList}" var="cliente">
+						<tr>
+							<td>${cliente.codigo}</td>
+							<td>${cliente.nome}</td>
+							<td width="20%">
+								<form action="${linkTo[ClienteController].remover(cliente)}"
+										method="post">
+									<a href="${linkTo[ClienteController].visualizar(cliente)}" class="btn btn-link">
+										<span class="glyphicon glyphicon-pencil"></span>
+									</a>
+									<button type="submit" name="_method" value="DELETE" class="btn btn-link">
+										<span class="glyphicon glyphicon-trash"></span>
+									</button>
+									
+								</form>
+								
+							</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </jsp:body>
 </layout:template>

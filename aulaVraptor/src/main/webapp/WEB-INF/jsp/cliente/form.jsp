@@ -13,16 +13,16 @@
 			<legend>Cadastro de Cliente</legend>
 			<!-- Text input-->
 			<div class="form-group">
-				<label class="col-md-4 control-label" for="nome">Nome:</label>
-				<div class="col-md-5">
+				<label class="col-xs-3 control-label" for="nome">Nome:</label>
+				<div class="col-xs-6">
 					<input id="nome" name="cliente.nome" placeholder=""
 						class="form-control input-md" required="" type="text">
 				</div>
 			</div>
 			<!-- Button -->
 			<div class="form-group">
-				<label class="col-md-4 control-label" for="save"></label>
-				<div class="col-md-4">
+				<label class="col-xs-3 control-label" for="save"></label>
+				<div class="col-xs-8">
 					<button id="save" name="save" class="btn btn-primary">Salvar</button>
 				</div>
 			</div>

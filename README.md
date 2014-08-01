@@ -33,3 +33,8 @@ A integração do Wildfly com o eclipse acontece através de um plugin do JbossA
 <h3>Acessando</h3>
 
 <p>Para acessar basta digitar a seguinte url no navegador http://localhost:8080/aulaVraptor/</p>
+
+
+<h3>Slideshare</h3>
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/37579461" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
