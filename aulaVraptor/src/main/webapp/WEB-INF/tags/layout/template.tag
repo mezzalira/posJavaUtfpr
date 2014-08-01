@@ -20,7 +20,7 @@
 	
 	<!-- Bootstrap -->
     <link href="<c:url value="/static/css/bootstrap.min.css"/>" rel="stylesheet" />
-    
+    <link href="<c:url value="/static/css/jquery-ui.min.css"/>" rel="stylesheet" />
     <!-- Curso -->
     <link href="<c:url value="/static/css/style.css"/>" rel="stylesheet" />
 

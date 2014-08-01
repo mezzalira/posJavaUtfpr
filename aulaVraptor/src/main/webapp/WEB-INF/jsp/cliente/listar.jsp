@@ -52,11 +52,11 @@
 					<td>
 						<form action="${linkTo[ClienteController].remover(cliente)}"
 								method="post">
-							<button type="submit" name="_method" value="DELETE">
+							<button type="submit" name="_method" value="DELETE" class="pull-left">
 								<span class="glyphicon glyphicon-trash"></span>
 							</button>
 						</form>
-						<a href="${linkTo[ClienteController].visualizar(cliente)}">
+						<a href="${linkTo[ClienteController].visualizar(cliente)}" class="pull-left">
 							<span class="glyphicon glyphicon-pencil"></span>
 						</a>
 					</td>
